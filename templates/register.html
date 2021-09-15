@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Medical Registration</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css">
+		h1 {
+			margin-left: 43%;
+		}
+		body {
+            background: #a2cbf9;
+        }
+        .jumbotron {
+        	background-color: #5fa8fc;
+        }
+	</style>
+</head>
+<body>
+    <!-- <div>
+        <video playinline autoplay="true" id="webcamp">
+        </video>
+    </div>
+    <div class="controller">
+    	<button id="snap">capture</button>
+    </div> -->
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Register</h1>
+		</div>
+		<form method="POST" action="/registerUser">
+			{% csrf_token %}
+			<label for="Fname">First Name:</label>
+			<input id="First" type="text" name="Fname" placeholder="First Name">
+
+			<label for="Lname" style="margin-left: 25%">Last Name:</label>
+			<input id="Last" type="text" name="Lname" placeholder="Last Name"><br><br>
+		<div>
+			<label>Gender:</label>
+			<label for="Gender">Male</label>
+			<input id="Gender" type="radio" name="Gender" value="Male">
+			<label for="Gender">Female</label>
+			<input id="Gender" type="radio" name="Gender" value="Female">
+			<label for="Gender">Others</label>
+			<input id="Gender" type="radio" name="Gender" value="Others">
+		</div><br>
+		<div>
+			 
+		</div>
+		<div>
+			<label>Email:</label>
+			<input type="Email" name="Email" placeholder="Your Email">
+
+			<label  style="margin-left: 28%">Password:</label>
+			<input type="Password" name="Password" placeholder="Password" required><br><br>
+		</div><br>
+		<div>
+
+			<label>Birthday:</label>
+			<input type="date" id="birthday" name="birthday">  
+		</div><br>
+		
+			 <hr>
+
+        <br><br>
+        	<button name="back" type="button" class="btn btn-outline-dark" onclick="window.location = '/'">Back</button>
+			<button name="Submit" type="submit" class="btn btn-outline-dark">submit</button>
+		</form>  	
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Medical Registration</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css">
+		h1 {
+			margin-left: 43%;
+		}
+		body {
+            background: #a2cbf9;
+        }
+        .jumbotron {
+        	background-color: #5fa8fc;
+        }
+    </style>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Patient Form</h1>
+		</div>
+		{% if data %}
+
+			<img src="" id="img" style="margin-left:20%; width: 20%; height: 20%;" alt="no image available"><br>
+			
+			<label for="Fname">First Name:</label>
+			<p style="text-decoration: underline;">{{firstName}}</p>
+
+			<label for="Lname">Last Name:</label>
+			<p style="text-decoration: underline;">{{lastName}}</p>
+			
+			<label for="Gender">Gender:</label>
+			<p style="text-decoration: underline;">{{gender}}</p>
+			
+			<label>Email:</label>
+			<p style="text-decoration: underline">{{email}}</p>
+		
+			<label>Birthday:</label>
+			<p style="text-decoration: underline;">{{birthday}}</p><br>
+		
+			<hr>
+			<br><br>
+
+	  		{% else %}
+			 
+			  <p>No record found !</p>
+
+	  	{% endif %}
+
+            
+	</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+	let image = "{{photo}}";
+	let imgElement = document.querySelector("#img");
+	imgElement.src = "static/images/" + image + ".jpg";
+	console.log(imgElement);
+</script>
+</html>
