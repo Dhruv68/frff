@@ -1,4 +1,4 @@
-# frff
+# face recognition form fillup
 Face Recognition Form FillUp System.
 
 Technologies: Web application(HTML, CSS, Javascript, NodeJS), Main Body(OpenCV, Python), Database(MongoDB local repository)
